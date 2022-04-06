@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8" />
+    <title>Actividad 02 - HTML: Formularios y tablas</title>
+    <meta name="description" content="Actividad 02 - Open Bootcamp - HTML" />
+    <meta name="keywords" content="html,css,javascript,web,curso,ejercicio" />
+    <meta name="author" content="Alexandra Rodríguez" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/fav-icon.png" />
+</head>
+
+<body>
+    <header>
+        <!--Titulo de nuestra página-->
+        <h1>Actividad 02 - HTML: Formularios y Tablas</h1>
+    </header>
+
+    <main>
+        <!--Enunciado del ejercicio número uno-->
+        <h3>Ejercicio 01:</h3>
+        <p>Crea un formulario en el que haya que introducir los siguientes datos:
+
+        <ul>
+            <li>Nombre</li>
+            <li>Apellido</li>
+            <li>Email</li>
+            <li>Teléfono</li>
+            <li>Dirección</li>
+        </ul>
+        <h3>Formulario:</h3>
+
+        <!--FORMULARIO-->
+        <form>
+            <!--Creamos una sección en el formulario-->
+            <fieldset>
+                <!--Indicamos el nombre de la sección-->
+                <legend>Datos Personales</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre">
+                <!--'br' no es una buena práctica esto se modifica con CSS-->
+                <br>
+                <br>
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Escriba sus dos apellidos">
+                <br>
+                <br>
+
+                <label for="correo">Email:</label>
+                <input type="email" id="correo" name="correo" placeholder="Escriba su email">
+                <br>
+                <br>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="number" id="telefono" name="telefono" placeholder="Escriba su teléfono" min="111111111" maxlength="12">
+                <br>
+                <br>
+
+                <legend>Dirección:</legend>
+                <br>
+
+
+                <label for="calle">Calle:</label>
+                <input type="text" id="calle" name="calle" placeholder="Escriba aquí su dirección">
+
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" max="5" min="1" max="99999">
+                <br>
+                <br>
+
+                <label for="pais">Selecciona tu país:</label>
+                <select id="pais" name="pais">
+                    <option hidden value>- Selecciona tu país -</option>
+                    <optgroup label="Europa">
+                        <option value="es">España</option>
+                        <option value="fr">Francia</option>
+                        <option value="ing">Inglaterra</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                        <option value="ch">China</option>
+                        <option value="jp">Japón</option>
+                        <option value="ko">Corea</option>
+                    </optgroup>
+
+                </select>
+            </fieldset>
+            <br>
+
+            <!--Botones de Enviar y Borrar Formularios-->
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar datos</button>
+        </form>
+
+        <hr>
+
+        <!--Enunciado del ejercicio número 2-->
+        <h3>Ejercicio 02:</h3>
+        Como segunda parte del ejercicio deberás crear una tabla, esta tabla tendrá 4 columnas y 4 filas, en esta tabla
+        deberás hacer que:
+        <ul>
+            <li>Una de las celdas ocupe dos columnas.</li>
+            <li>Una de las celdas ocupe dos filas.</li>
+        </ul>
+        </p>
+
+        <h3>Tabla:</h3>
+        <!--TABLA-->
+        <!--El atributo border se debería poner con CSS-->
+        <table border="2px">
+            <!--Primera fila-->
+            <tr>
+                <!--Primera celda de la primera fila-->
+                <th>Lunes</th>
+                <!--Segunda celda de la primera fila-->
+                <th>Martes</th>
+                <!--Tercera celda de la primera fila-->
+                <th>Miércoles</th>
+                <!--Cuarta celda de la primera fila-->
+                <th>Jueves</th>
+            </tr>
+
+            <!--Segunda Fila-->
+            <tr>
+                <!--Primera celda de la segunda fila ocupa dos columnas-->
+                <td colspan="2">HTML</td>
+                <!--Segunda celda de la segunda fila ocupa dos fillas-->
+                <td rowspan="2">BBDD</td>
+                <!--Tercera celda de la segunda fila -->
+                <td>Tecnología</td>
+            </tr>
+
+            <!--Tercera fila-->
+            <tr>
+                <!--Primera celda de la tercera fila -->
+                <td>CSS</td>
+                <!--Segunda celda de la tercera fila -->
+                <td>Java</td>
+                <!--Tercera celda de la tercera fila -->
+                <td>Javascript</td>
+            </tr>
+
+            <!--Cuarta fila-->
+            <tr>
+                <!--Primera celda de la cuarta fila -->
+                <td>Angular</td>
+                <!--Segunda celda de la cuarta fila -->
+                <td>BBDD</td>
+                <!--Tercera celda de la cuarta fila -->
+                <td>Java</td>
+                <!--Cuarta celda de la cuarta fila -->
+                <td>HTML</td>
+            </tr>
+        </table>
+
+
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
